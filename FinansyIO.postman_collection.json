@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "2c2659db-252c-488a-a506-46869720ebb6",
+		"name": "FinansyIO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36844194"
+	},
+	"item": [
+		{
+			"name": "CreateBalance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/balance/create?balance_name=new Balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"balance",
+						"create"
+					],
+					"query": [
+						{
+							"key": "balance_name",
+							"value": "new Balance"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBalance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/balance/get?balance_name=new Balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"balance",
+						"get"
+					],
+					"query": [
+						{
+							"key": "balance_name",
+							"value": "new Balance"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTransactionDEPOSIT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"transaction_type\": \"DEPOSIT\",\n    \"amount\": 100.0,\n    \"currency\": \"EUR\",\n    \"balance_name\": \"new Balance\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/transaction/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"transaction",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTransactionWITHDRAW",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"transaction_type\": \"WITHDRAW\",\n    \"amount\": 100.0,\n    \"currency\": \"USD\",\n    \"balance_name\": \"new Balance\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/transaction/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"transaction",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transactions",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
