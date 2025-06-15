@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: password
+    url: jdbc:postgresql://postgres:5432/postgres
+  application:
+    name: finansyIo
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8081
+
